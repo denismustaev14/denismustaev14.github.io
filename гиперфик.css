@@ -159,8 +159,9 @@ img{
     }
     
     .container {
-        min-height: auto;
-        padding: 20px 0;
+        min-height: 100vh;  /* ← не убираем! */
+        padding: 20px;
+        justify-content: center;
     }
     
     .hero-greeting {
