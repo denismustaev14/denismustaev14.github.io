@@ -1,0 +1,242 @@
+:root {
+    --blush: #ffb7c5;      
+    --lavender: #e0c3ff;   
+    --peach: #ffd6b0;   
+    --cream: #fff5f0;  
+    --text: #4a3b5c;       
+    --shadow: rgba(0, 0, 0, 0.05);
+}
+body {
+    background: linear-gradient(135deg, #ffdde1 0%, #ffb7c5 50%, #ff9eb0 100%);
+    font-family: 'Segoe UI', system-ui, -apple-system, 'Quicksand', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.screen{
+    display: none;
+    padding: 50px;
+}
+.screen.active{
+    display: block;
+}
+.hero-greeting{
+    font-size: 3.2rem;
+    font-weight: 600;
+    text-shadow: 2px 2px 8px rgba(255, 183, 197, 0.3);
+    letter-spacing: -0.3px;
+    display: flex;
+    text-align: center;
+    
+}
+.hello_text{
+    margin: 40px;
+    justify-content: center;
+}
+.post_scriptum{
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: rgb(119, 114, 114);
+    margin-bottom: 40px;
+    text-align: center;
+
+}
+.container{
+ min-height: 100vh;   
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+}
+.buttons-wrapper{
+    display: flex;
+    gap: 70px;
+    min-width: 400px;
+}
+.btn{
+    font-size: 1.9rem;
+    font-weight: 600;
+    padding: 12px 28px;
+    border: none;
+    border-radius: 50px;      
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: inherit;
+    box-shadow: 0 4px 12px var(--shadow);
+}
+.btn-yes {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    position: relative;
+}
+
+
+
+.btn:hover {     
+    transform: scale(1.02);
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+.clicked {
+    background: #d4c1ec;
+}
+
+.btn-no-runaway {
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 183, 197, 0.5);
+}
+.question{
+    font-size: 1.9rem;
+    margin: 15px;
+}
+.responses{
+    display: grid;
+    grid-template-columns: 1fr 1fr;  
+    gap: 10px;
+    margin-bottom:20px ;
+}
+textarea {
+    width: 100%;
+    padding: 14px 18px;
+    border: 1.5px solid rgba(255, 183, 197, 0.4);
+    border-radius: 28px;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(4px);
+    font-family: inherit;
+    font-size: 1rem;
+    color: #4a3b5c;
+    transition: all 0.2s ease;
+    box-sizing: border-box;
+    grid-column: span 2;  
+}
+
+
+textarea:focus {
+    outline: none;
+    border-color: #ffb7c5;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 0 0 3px rgba(255, 183, 197, 0.2);
+}
+
+
+textarea::placeholder {
+    color: rgba(74, 59, 92, 0.4);
+    font-weight: 400;
+}
+
+
+textarea {
+    resize: vertical; 
+    min-height: 100px;
+}
+
+.test{
+
+    margin: 50px;
+}
+.about_me{
+    display: block;
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 50px;
+}
+
+img{
+    border-radius: 25%;
+    width: 200px;
+    height: 200px;
+}
+
+
+@media (max-width: 768px) {
+    .screen {
+        padding: 20px;
+    }
+    
+    .container {
+        min-height: auto;
+        padding: 20px 0;
+    }
+    
+    .hero-greeting {
+        font-size: 1.8rem;  /* уменьшаем заголовок */
+    }
+    
+    .buttons-wrapper {
+        min-width: auto;      /* убираем фикс. ширину */
+        gap: 20px;           /* уменьшаем отступ */
+        flex-wrap: wrap;     /* если не влезают — переносим */
+        justify-content: center;
+    }
+    
+    .btn {
+        font-size: 1.2rem;   
+        padding: 10px 20px;
+    }
+    
+    .question {
+        font-size: 1.3rem;   
+        text-align: center;
+    }
+    
+    .responses {
+        gap: 8px;
+    }
+    
+    .btn_test {
+        font-size: 0.9rem;  
+        padding: 8px 12px;
+    }
+    
+    .test {
+        margin: 20px;        
+    }
+    
+    .post_scriptum {
+        font-size: 1rem;
+        text-align: center;
+    }
+    
+    img {
+        width: 150px;        
+        height: 150px;
+    }
+    
+    .about_me {
+        margin-bottom: 30px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .hero-greeting {
+        font-size: 1.4rem;
+    }
+    
+    .btn {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
+    
+    .btn_test {
+        font-size: 0.8rem;
+        padding: 6px 10px;
+    }
+    
+    .responses {
+        grid-template-columns: 1fr;  
+    }
+    
+    textarea {
+        grid-column: span 1;  
+    }
+    
+    .buttons-wrapper {
+        gap: 15px;
+    }
+}
