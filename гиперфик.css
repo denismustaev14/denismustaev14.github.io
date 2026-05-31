@@ -55,6 +55,7 @@ body {
     display: flex;
     gap: 70px;
     min-width: 400px;
+   
 }
 .btn{
     font-size: 1.9rem;
@@ -174,6 +175,7 @@ img{
         gap: 20px;           /* уменьшаем отступ */
         flex-wrap: wrap;     /* если не влезают — переносим */
         justify-content: center;
+        width: 200px;
     }
     
     .btn {
@@ -240,5 +242,6 @@ img{
     
     .buttons-wrapper {
         gap: 15px;
+        justify-content: flex-start;
     }
 }
