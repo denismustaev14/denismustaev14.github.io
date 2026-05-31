@@ -166,6 +166,7 @@ img{
     
     .hero-greeting {
         font-size: 1.8rem;  /* уменьшаем заголовок */
+        white-space: nowrap;
     }
     
     .buttons-wrapper {
